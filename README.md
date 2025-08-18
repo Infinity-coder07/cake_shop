@@ -18,9 +18,9 @@ Built with **HTML, CSS, and JavaScript**.
 ---
 
 ## 📂 Project Structure
-cake_shop/
-│── index.html # Main page
-│── style.css # Stylesheet
-│── script.js # JavaScript functionality
-│── /images # Images of cakes, pastries, cookies, snacks
-│── /icons # Favicon or extra icons
+- cake_shop/
+- │── index.html # Main page
+- │── style.css # Stylesheet
+- │── script.js # JavaScript functionality
+- │── /images # Images of cakes, pastries, cookies, snacks
+- │── /icons # Favicon or extra icons
