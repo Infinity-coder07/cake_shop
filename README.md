@@ -13,8 +13,14 @@ Built with **HTML, CSS, and JavaScript**.
 - 💸 Old price vs new price (discount system)  
 - 📱 Responsive design for mobile & desktop  
 - 🖼️ Lazy-loaded images for faster performance  
-- 🌙 Dark mode (if you added that 😉)  
+ 
 
 ---
 
 ## 📂 Project Structure
+cake_shop/
+│── index.html # Main page
+│── style.css # Stylesheet
+│── script.js # JavaScript functionality
+│── /images # Images of cakes, pastries, cookies, snacks
+│── /icons # Favicon or extra icons
