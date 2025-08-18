@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <nav>
+        <div>
+            <img src="nav-logo.png" class="logo" alt="Logo">
+        </div>
+
+        <span class="nav-title">Cake Shop</span>
+        <div class="space"></div>
+    </nav>
+
+    <input type="radio" name="menu" id="radio-1" checked>
+    <input type="radio" name="menu" id="radio-2">
+    <input type="radio" name="menu" id="radio-3">
+    <input type="radio" name="menu" id="radio-4">
+    <input type="radio" name="menu" id="radio-5">
+
+
+    <div class="menu">
+        <label for="radio-1" class="link">
+            <span class="link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M160-80q-17 0-28.5-11.5T120-120v-200q0-33 23.5-56.5T200-400v-160q0-33 23.5-56.5T280-640h160v-58q-18-12-29-29t-11-41q0-15 6-29.5t18-26.5l56-56 56 56q12 12 18 26.5t6 29.5q0 24-11 41t-29 29v58h160q33 0 56.5 23.5T760-560v160q33 0 56.5 23.5T840-320v200q0 17-11.5 28.5T800-80H160Zm120-320h400v-160H280v160Zm-80 240h560v-160H200v160Zm80-240h400-400Zm-80 240h560-560Zm560-240H200h560Z" />
+                </svg>
+            </span>
+            <span class="link-title">Cake</span>
+        </label>
+        <label for="radio-2" class="link">
+            <span class="link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M480-96q-79.38 0-149.19-30T208.5-208.5Q156-261 126-330.81T96-480q0-81 31-151.5t82.5-123Q261-807 329-837.5T470-868q23 0 45 3t45 9q-8 45 5.5 82t42.03 60.96q28.53 23.96 68 33T759-681q-24 57 8.01 108.5 32.01 51.49 95.08 53.4.95 10.49 1.43 19.55T864-480q0 78-30.24 147.98-30.24 69.99-82.08 122.6t-121.92 83.01Q559.68-96 480-96Zm-60-456q25 0 42.5-17.5T480-612q0-25-17.5-42.5T420-672q-25 0-42.5 17.5T360-612q0 25 17.5 42.5T420-552Zm-96 192q25 0 42.5-17.5T384-420q0-25-17.5-42.5T324-480q-25 0-42.5 17.5T264-420q0 25 17.5 42.5T324-360Zm275.79 36q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5ZM480-168q125 0 214.5-84.5T792-462q-45-18-75-55.5T679-603q-76-11-129-63t-63-126q-63-4-120.5 19.5t-102 66.5Q220-663 194-604.5T168-480q0 129.67 91.16 220.84Q350.33-168 480-168Zm0-311Z" />
+                </svg>
+            </span>
+            <span class="link-title big-txt">Cookie</span>
+        </label>
+        <label for="radio-3" class="link">
+            <span class="link-icon">
+                <img class="pastry" src="cake.png" alt="">
+
+            </span>
+            <span class="link-title big-txt">Pastry</span>
+        </label>
+        <label for="radio-4" class="link">
+            <span class="link-icon">
+                <span class="cart">
+                    <img class="pastry" src="burger.png" alt="">
+                </span>
+
+            </span>
+            <span class="link-title big-txt">Snacks</span>
+        </label>
+        <label for="radio-5" class="link">
+            <span class="link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 
+                    23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 
+                    33-23.5 56.5T280-80Zm400 
+                    0q-33 0-56.5-23.5T600-160q0-33 
+                    23.5-56.5T680-240q33 0 
+                    56.5 23.5T760-160q0 
+                    33-23.5 56.5T680-80ZM246-720l96 
+                    200h280l110-200H246Zm-38-80h590q23 
+                    0 35 20.5t1 41.5L692-482q-11 20-29.5 
+                    31T622-440H324l-44 
+                    80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 
+                    80Zm134 280h280-280Z" />
+                </svg>
+            </span>
+            <span class="link-title">Cart</span>
+        </label>
+
+    </div>
+
+    <div id="tab-1" class="cakes">
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="Cakes-Pic/cake (1).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹500</span>
+                        <span class="new-price">₹400</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Chocolate Cake</h2>
+                <p>Delicious chocolate cake with rich frosting.</p>
+            </span>
+
+            <div class="product btns" data-name="Chocolate Cake">
+                <button class="c-button" onclick="addToCart('Chocolate Cake', 400)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="Cakes-Pic/cake (2).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹500</span>
+                        <span class="new-price">₹450</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Red Velvet Cake</h2>
+                <p>Soft and fluffy red velvet cake with creamy cheese frosting.</p>
+            </span>
+
+            <div class="product btns" data-name="Red Velvet Cake">
+                <button class="c-button" onclick="addToCart('Red Velvet Cake', 450)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="Cakes-Pic/cake (3).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹600</span>
+                        <span class="new-price">₹500</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Black Forest Cake</h2>
+                <p>Layers of chocolate sponge, whipped cream, and cherries.</p>
+            </span>
+
+            <div class="product btns" data-name="Black Forest Cake">
+                <button class="c-button" onclick="addToCart('Black Forest Cake', 500)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="Cakes-Pic/cake (4).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹800</span>
+                        <span class="new-price">₹600</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Cheesecake</h2>
+                <p>Rich and creamy cheesecake with a buttery biscuit base.</p>
+            </span>
+
+            <div class="product btns" data-name="Cheesecake">
+                <button class="c-button" onclick="addToCart('Cheesecake', 600)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="Cakes-Pic/cake (5).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹500</span>
+                        <span class="new-price">₹350</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Strawberry Shortcake</h2>
+                <p>Light sponge cake layered with cream and fresh strawberries.</p>
+            </span>
+
+            <div class="product btns" data-name="Strawberry Shortcake">
+                <button class="c-button" onclick="addToCart('Strawberry Shortcake', 350)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="Cakes-Pic/cake (6).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹600</span>
+                        <span class="new-price">₹450</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Lemon Drizzle Cake</h2>
+                <p>Refreshing lemon sponge topped with sweet citrus glaze.</p>
+            </span>
+
+            <div class="product btns" data-name="Lemon Drizzle Cake">
+                <button class="c-button" onclick="addToCart('Lemon Drizzle Cake', 450)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="Cakes-Pic/cake (7).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹600</span>
+                        <span class="new-price">₹350</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Carrot Cake</h2>
+                <p>Moist carrot cake with walnuts and cream cheese frosting.</p>
+            </span>
+
+            <div class="product btns" data-name="Carrot Cake">
+                <button class="c-button" onclick="addToCart('Carrot Cake', 350)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+
+         
+    </div>
+
+    <div id="tab-2" class="cakes">
+        <div class="cake">
+            <div class="img-box">
+                <img src="cookie/cookie (1).jpg" alt="Cake 1">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹100</span>
+                        <span class="new-price">₹80</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Chocolate Chip Cookie</h2>
+                <p>Classic chewy cookie loaded with gooey chocolate chips.</p>
+            </span>
+
+            <div class="product btns" data-name="Chocolate Chip Cookie">
+                <button class="c-button" onclick="addToCart('Chocolate Chip Cookie', 80)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="cookie/cookie (2).jpg" alt="Oatmeal Raisin Cookie">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹110</span>
+                        <span class="new-price">₹85</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Oatmeal Raisin Cookie</h2>
+                <p>Soft and wholesome with oats and sweet raisins.</p>
+            </span>
+
+            <div class="product btns" data-name="Oatmeal Raisin Cookie">
+                <button class="c-button" onclick="addToCart('Oatmeal Raisin Cookie', 85)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="cookie/cookie (3).jpg" alt="Peanut Butter Cookie">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹100</span>
+                        <span class="new-price">₹75</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Peanut Butter Cookie</h2>
+                <p>Rich and nutty cookie with a melt-in-your-mouth texture.</p>
+            </span>
+
+            <div class="product btns" data-name="Peanut Butter Cookie">
+                <button class="c-button" onclick="addToCart('Peanut Butter Cookie', 75)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="cookie/cookie (4).jpg" alt="Double Chocolate Cookie">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹140</span>
+                        <span class="new-price">₹110</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Double Chocolate Cookie</h2>
+                <p>Decadent cocoa cookie packed with extra chocolate chunks.</p>
+            </span>
+
+            <div class="product btns" data-name="Double Chocolate Cookie">
+                <button class="c-button" onclick="addToCart('Double Chocolate Cookie', 110)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="cookie/cookie (5).jpg" alt="Snickerdoodle Cookie">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹70</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Snickerdoodle Cookie</h2>
+                <p>Soft cinnamon-sugar cookie with a sweet tangy flavor.</p>
+            </span>
+
+            <div class="product btns" data-name="Snickerdoodle Cookie">
+                <button class="c-button" onclick="addToCart('Snickerdoodle Cookie', 70)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="cookie/cookie (6).jpg" alt="Shortbread Cookie">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹80</span>
+                        <span class="new-price">₹60</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Shortbread Cookie</h2>
+                <p>Buttery, crumbly cookie that melts in your mouth.</p>
+            </span>
+
+            <div class="product btns" data-name="Shortbread Cookie">
+                <button class="c-button" onclick="addToCart('Shortbread Cookie', 60)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="cookie/cookie (7).jpg" alt="Macadamia Nut Cookie">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹160</span>
+                        <span class="new-price">₹130</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Macadamia Nut Cookie</h2>
+                <p>Crunchy cookie with white chocolate and macadamia nuts.</p>
+            </span>
+
+            <div class="product btns" data-name="Macadamia Nut Cookie">
+                <button class="c-button" onclick="addToCart('Macadamia Nut Cookie', 130)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+         
+    </div>
+
+    <div id="tab-3" class="cakes">
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (1).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹150</span>
+                        <span class="new-price">₹99</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Strawberry Tart</h2>
+                <p>Fresh strawberries on creamy custard in a crisp tart shell.</p>
+            </span>
+            <div class="product btns" data-name="Strawberry Tart">
+                <button class="c-button" onclick="addToCart('Strawberry Tart', 99)"><span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (2).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹120</span>
+                        <span class="new-price">₹75</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Chocolate Éclair</h2>
+                <p>Light pastry filled with cream and topped with chocolate glaze.</p>
+            </span>
+            <div class="product btns" data-name="Chocolate Éclair">
+                <button class="c-button" onclick="addToCart('Chocolate Éclair', 75)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (3).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹100</span>
+                        <span class="new-price">₹70</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Vanilla Slice</h2>
+                <p>Layered puff pastry with smooth vanilla cream filling.</p>
+            </span>
+            <div class="product btns" data-name="Vanilla Slice">
+                <button class="c-button" onclick="addToCart('Vanilla Slice', 70)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (4).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹60</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Lemon Danish</h2>
+                <p>Flaky pastry filled with tangy lemon cream and glaze.</p>
+            </span>
+            <div class="product btns" data-name="Lemon Danish">
+                <button class="c-button" onclick="addToCart('Lemon Danish', 60)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (5).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹140</span>
+                        <span class="new-price">₹95</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Raspberry Mille-Feuille</h2>
+                <p>Thin pastry layers with cream and raspberry filling.</p>
+            </span>
+            <div class="product btns" data-name="Raspberry Mille-Feuille">
+                <button class="c-button" onclick="addToCart('Raspberry Mille-Feuille', 95)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (6).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹110</span>
+                        <span class="new-price">₹80</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Apple Turnover</h2>
+                <p>Golden pastry filled with warm cinnamon apples.</p>
+            </span>
+            <div class="product btns" data-name="Apple Turnover">
+                <button class="c-button" onclick="addToCart('Apple Turnover', 80)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (7).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹130</span>
+                        <span class="new-price">₹85</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Cream Puff</h2>
+                <p>Airy pastry shell filled with sweet whipped cream.</p>
+            </span>
+            <div class="product btns" data-name="Cream Puff">
+                <button class="c-button" onclick="addToCart('Cream Puff', 85)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+        <div class="cake">
+            <div class="img-box">
+                <img src="pastry/pastry (8).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹160</span>
+                        <span class="new-price">₹110</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Hazelnut Croissant</h2>
+                <p>Buttery croissant layered with hazelnut praline cream.</p>
+            </span>
+            <div class="product btns" data-name="Hazelnut Croissant">
+                <button class="c-button" onclick="addToCart('Hazelnut Croissant', 110)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href=""><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now</span></a>
+            </div>
+        </div>
+
+
+
+
+
+
+         
+    </div>
+
+    <div id="tab-4" class="cakes">
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (1).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹120</span>
+                        <span class="new-price">₹70</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>French Fries</h2>
+                <p>Crispy golden fries with a light sprinkle of salt.</p>
+            </span>
+            <div class="product btns" data-name="French Fries">
+                <button class="c-button" onclick="addToCart('French Fries', 70)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+
+                <img src="snacks/snack (2).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹180</span>
+                        <span class="new-price">₹120</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Cheese Pizza</h2>
+                <p>Hot pizza topped with melted cheese and herbs.</p>
+            </span>
+            <div class="product btns" data-name="Cheese Pizza">
+                <button class="c-button" onclick="addToCart('Cheese Pizza', 120)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (3).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹150</span>
+                        <span class="new-price">₹95</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Chicken Balls</h2>
+                <p>Juicy chicken balls fried till golden brown.</p>
+            </span>
+            <div class="product btns" data-name="Chicken Balls">
+                <button class="c-button" onclick="addToCart('Chicken Balls', 95)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (4).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹100</span>
+                        <span class="new-price">₹60</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Veg Sandwich</h2>
+                <p>Fresh veggies stacked in soft bread with sauce.</p>
+            </span>
+            <div class="product btns" data-name="Veg Sandwich">
+                <button class="c-button" onclick="addToCart('Veg Sandwich', 60)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (5).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹150</span>
+                        <span class="new-price">₹90</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Cheese Burger</h2>
+                <p>Loaded burger with crispy patty and melted cheese.</p>
+            </span>
+            <div class="product btns" data-name="Cheese Burger">
+                <button class="c-button" onclick="addToCart('Cheese Burger', 90)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (6).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹80</span>
+                        <span class="new-price">₹50</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Samosa</h2>
+                <p>Crispy fried pastry stuffed with spicy potatoes.</p>
+            </span>
+            <div class="product btns" data-name="Samosa">
+                <button class="c-button" onclick="addToCart('Samosa', 50)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (7).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹120</span>
+                        <span class="new-price">₹70</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Spring Rolls</h2>
+                <p>Veggies wrapped in thin pastry, deep fried crispy.</p>
+            </span>
+            <div class="product btns" data-name="Spring Rolls">
+                <button class="c-button" onclick="addToCart('Spring Rolls', 70)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (8).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹200</span>
+                        <span class="new-price">₹140</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Pasta Bowl</h2>
+                <p>Delicious creamy pasta with herbs and cheese.</p>
+            </span>
+            <div class="product btns" data-name="Pasta Bowl">
+                <button class="c-button" onclick="addToCart('Pasta Bowl', 140)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (9).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹150</span>
+                        <span class="new-price">₹100</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Hot Dog</h2>
+                <p>Classic hot dog with sausage and tangy sauces.</p>
+            </span>
+            <div class="product btns" data-name="Hot Dog">
+                <button class="c-button" onclick="addToCart('Hot Dog', 100)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (10).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹130</span>
+                        <span class="new-price">₹85</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Nachos</h2>
+                <p>Crispy nachos served with cheesy dip and salsa.</p>
+            </span>
+            <div class="product btns" data-name="Nachos">
+                <button class="c-button" onclick="addToCart('Nachos', 85)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cake">
+            <div class="img-box">
+
+                <img src="snacks/snack (1).jpg" loading="lazy">
+                <span class="price">
+                    <div class="price-container">
+                        <span class="old-price">₹100</span>
+                        <span class="new-price">₹50</span>
+                    </div>
+                </span>
+            </div>
+            <span class="cake-info">
+                <h2>Small Sandwich</h2>
+                <p>Delicious chocolate cake with rich frosting.</p>
+            </span>
+
+            <div class="product btns" data-name="Sneakers">
+                <button class="c-button" onclick="addToCart('Burger', 45)">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add to Cart
+                    </span>
+                </button>
+
+                <a class="order-btn" href="">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 20 560 512.459">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+
+
+
+         
+    </div>
+
+
+    <div id="cart-container">
+        <div class="cart" id="cart">
+            <h3>Cart (<span id="cart-count">0</span>)</h3>
+
+            <ul id="cart-items"></ul>
+
+
+            <div class="checkout">
+                <div class="total">Items Total: ₹<span id="items-total">0</span></div>
+                <div class="total">Delivery Charges: ₹20</div>
+                <div class="total">Grand Total: ₹<span id="cart-total">0</span></div>
+            </div>
+            <div class="btns-cart">
+                <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+                <button class="order-btn2" onclick="placeOrder()">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                            clip-rule="evenodd" viewBox="0 30 560 513">
+                            <path
+                                d="M435.689 74.468C387.754 26.471 324 .025 256.071 0 116.098 0 2.18 113.906 2.131 253.916c-.024 44.758 11.677 88.445 33.898 126.946L0 512.459l134.617-35.311c37.087 20.238 78.85 30.891 121.345 30.903h.109c139.949 0 253.88-113.917 253.928-253.928.024-67.855-26.361-131.645-74.31-179.643v-.012zm-179.618 390.7h-.085c-37.868-.011-75.016-10.192-107.428-29.417l-7.707-4.577-79.886 20.953 21.32-77.889-5.017-7.987c-21.125-33.605-32.29-72.447-32.266-112.322.049-116.366 94.729-211.046 211.155-211.046 56.373.025 109.364 22.003 149.214 61.903 39.853 39.888 61.781 92.927 61.757 149.313-.05 116.377-94.728 211.058-211.057 211.058v.011zm115.768-158.067c-6.344-3.178-37.537-18.52-43.358-20.639-5.82-2.119-10.044-3.177-14.27 3.178-4.225 6.357-16.388 20.651-20.09 24.875-3.702 4.238-7.403 4.762-13.747 1.583-6.343-3.178-26.787-9.874-51.029-31.487-18.86-16.827-31.597-37.598-35.297-43.955-3.702-6.355-.39-9.789 2.775-12.943 2.849-2.848 6.344-7.414 9.522-11.116s4.225-6.355 6.343-10.581c2.12-4.238 1.06-7.937-.522-11.117-1.584-3.177-14.271-34.409-19.568-47.108-5.151-12.37-10.385-10.69-14.269-10.897-3.703-.183-7.927-.219-12.164-.219s-11.105 1.582-16.925 7.939c-5.82 6.354-22.209 21.709-22.209 52.927 0 31.22 22.733 61.405 25.911 65.642 3.177 4.237 44.745 68.318 108.389 95.812 15.135 6.538 26.957 10.446 36.175 13.368 15.196 4.834 29.027 4.153 39.96 2.52 12.19-1.825 37.54-15.353 42.824-30.172 5.283-14.818 5.283-27.529 3.701-30.172-1.582-2.641-5.819-4.237-12.163-7.414l.011-.024z" />
+                        </svg>
+                        Order Now
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Item added to cart!</div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Developer Arko Sarkar. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="https://www.facebook.com/profile.php?id=61574827152602&mibextid=qi2Omg&rdid=2zltWfK3VYFdBuex&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16gxeakQcf%2F%3Fmibextid%3Dqi2Omg#" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/_lysosome_007?igsh=a29rZnJoYm00ZTNu" target="_blank">Instagram</a> |
+                <a href="https://github.com/Infinity-coder07" target="_blank">Github</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
