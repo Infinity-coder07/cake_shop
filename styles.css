@@ -290,7 +290,7 @@ input[type="radio"] {
     /* margin-top: 30px; */
     border-radius: 8px;
     margin: 5vmax;
-    width: 80vmin;
+    width: 95vmin;
     max-width: 350px;
     margin-top: 10px;
     margin-bottom: 0px
@@ -438,6 +438,7 @@ input[type="radio"] {
     margin-top: 10px;
     font-size: 18px;
     transform: translateY(5px);
+    height: 100%;
     /* width: 50px */
 }
 
@@ -487,6 +488,7 @@ input[type="radio"] {
     /* box-shadow: -6px -5px 18px rgba(255, 255, 255, 0.1); */
     cursor: pointer;
     /* width: 50%; */
+    transform: translateX(-7px);
 }
 
 .c-button .c-main {
