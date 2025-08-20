@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartEl = document.getElementById('cart-container');
     const cartCount = document.getElementById('cart-count');
+    const cartCount2 = document.getElementById('cart-count2');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
     const itemsTotal = document.getElementById('items-total');
@@ -75,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cartItems) cartItems.innerHTML = '';
         let total = 0,
             totalQty = 0;
+
         cart.forEach((item, i) => {
             total += item.price * item.quantity;
             totalQty += item.quantity;
@@ -89,15 +91,37 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
             if (cartItems) cartItems.appendChild(li);
         });
-        if (cartCount) cartCount.textContent = totalQty;
+
+        // ✅ Update cart badge (tab)
+        if (cartCount) {
+            if (totalQty > 0) {
+                cartCount.textContent = totalQty;
+                cartCount.style.display = "inline-block";
+            } else {
+                cartCount.textContent = "";
+                cartCount.style.display = "none";
+            }
+        }
+
+        // ✅ Update cart page counter
+        if (cartCount2) {
+            if (totalQty > 0) {
+                cartCount2.textContent = totalQty;
+                cartCount2.style.display = "inline-block";
+            } else {
+                cartCount2.textContent = "";
+                cartCount2.style.display = "none";
+            }
+        }
+
         if (itemsTotal) itemsTotal.textContent = total.toFixed(2);
 
         const grand = total + (total > 0 ? 20 : 0);
         if (cartTotal) cartTotal.textContent = grand.toFixed(2);
 
-        // Update the main cart's WhatsApp link
         assignCartWhatsAppLink();
     }
+
 
     // --- WhatsApp Link Builders ---
 
@@ -129,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('.order-btn2').forEach(btn => {
             if (btn.hasAttribute('onclick')) btn.removeAttribute('onclick');
             if (btn._waClickHandler) btn.removeEventListener('click', btn._waClickHandler);
-            
+
             const handler = () => window.open(url, '_blank', 'noopener');
             btn.addEventListener('click', handler);
             btn._waClickHandler = handler;
@@ -161,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // --- Global Cart Functions ---
-    window.addToCart = function(name, price) {
+    window.addToCart = function (name, price) {
         const found = cart.find(p => p.name === name);
         if (found) {
             found.quantity++;
@@ -177,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showToast(`${name} added!`);
     };
 
-    window.changeQuantity = function(i, d) {
+    window.changeQuantity = function (i, d) {
         if (!cart[i]) return;
         cart[i].quantity += d;
         if (cart[i].quantity <= 0) cart.splice(i, 1);
@@ -185,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCart();
     };
 
-    window.removeFromCart = function(i) {
+    window.removeFromCart = function (i) {
         if (!cart[i]) return;
         const itemName = cart[i].name;
         cart.splice(i, 1);
@@ -194,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showToast(`${itemName} removed.`);
     };
 
-    window.clearCart = function() {
+    window.clearCart = function () {
         cart = [];
         saveCart();
         updateCart();
@@ -202,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // This function is kept for potential future use but is overridden for .order-btn2 by assignCartWhatsAppLink
-    window.placeOrder = function() {
+    window.placeOrder = function () {
         if (cart.length === 0) {
             showToast("Your cart is empty!");
         } else {
@@ -216,3 +240,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setupDirectOrderLinks(); // [FIX APPLIED HERE] Makes the individual "Order Now" buttons work
 
 }); // DOMContentLoaded end
+
